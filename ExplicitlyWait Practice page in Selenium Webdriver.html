@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- <meta name="description" content="Learn how to handle( write text and to save ) notepad with help of AutoIT"> -->
+<meta name="keywords" content="Explicit Wait Practice Page - Chroma Tech Academy">
+<meta name="author" content="">
+<title>Explicit Wait Practice Page - Chroma Tech Academy</title>
+<link rel="icon" href="./ExplicitlyWait Practice page in Selenium Webdriver_files/P6.png" type="image/gif">
+<link rel="apple-touch-icon" sizes="120x120" href="./ExplicitlyWait Practice page in Selenium Webdriver_files/P6.png">
+
+<link href="./ExplicitlyWait Practice page in Selenium Webdriver_files/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+<link href="./ExplicitlyWait Practice page in Selenium Webdriver_files/sb-admin-a19.css" rel="stylesheet">
+<script src="./ExplicitlyWait Practice page in Selenium Webdriver_files/prism1.js"></script><script src="./ExplicitlyWait Practice page in Selenium Webdriver_files/jquery.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+	.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0; 
+    overflow: hidden;
+	}
+	.video-container iframe,
+	.video-container object,
+	.video-container embed {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	}
+	li.comment {
+		padding: 10px;
+		background: #ededed00;
+		margin-top: 5px;
+		list-style: none;
+		border-color: #000;
+		/* border: 1px solid #343a40; */
+		/* border-radius: 1rem 1rem 3rem; */
+		border-top-color: rgb(52, 58, 64);
+		border-top-style: solid;
+		border-top-width: 1px;
+		border-right-color: rgb(52, 58, 64);
+		/* border-right-style: solid; */
+		border-right-width: 1px;
+		border-bottom-color: rgb(52, 58, 64);
+		/* border-bottom-style: solid; */
+		border-bottom-width: 1px;
+		border-left-color: rgb(52, 58, 64);
+		border-left-style: solid;
+		border-left-width: 1px;
+		border-top-left-radius: 6px;
+}
+
+.aut{
+    color: #3f51b5;
+    font-weight:700;
+}
+
+.comment-body{
+    font-size:14px;
+}
+
+.timestamp{
+    font-size:10px;
+}
+
+.comment button{
+		width: 46px;
+    height: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    font-size: 12px;
+}
+
+.comment ul{
+    padding-left: 15px;
+}
+
+</style>
+
+<meta property="og:type" content="article"><meta property="og:title" content="Explicit Wait Practice Page - Chroma Tech Academy">
+<link rel="canonical" href="https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver">
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://chercher.tech","name":"null"}},{"@type":"ListItem","position":2,"item":{"@id":"https://chercher.tech","name":"null"}},{"@type":"ListItem","position":3,"item":{"@id":"https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver","name":"ExplicitlyWait Practice page in Selenium Webdriver"}}]}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","url":"https://chercher.tech","logo":"https://chercher.tech/images/logo.png"}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"Person","name":"karthiQ","url":"https://chercher.tech","sameAs":["https://www.facebook.com/seleniumwebdrivercom","https://in.linkedin.com/in/cherchertech"]}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","url":"https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver","name":"ExplicitlyWait Practice page in Selenium Webdriver","author":{"@type":"Person","name":"karthiq"},"description":"ExplicitlyWait Practice page in Selenium Webdriver","publisher":"chercher tech"}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver"},"headline":"ExplicitlyWait Practice page in Selenium Webdriver","image":"https://chercher.tech/tiles/explicit-wait-sample-selenium-webdriver.php.png","datePublished":"2017-11-14T14:03:12+00:00","dateModified":"2018-08-29T05:36:39+00:00","author":{"@type":"Person","name":"CherCher Tech"},"publisher":{"@type":"Organization","name":"CherCher Tech","logo":{"@type":"ImageObject","url":"https://chercher.tech/images/favicon.png"}},"description":"ExplicitlyWait Practice page in Selenium Webdriver","name":"ExplicitlyWait Practice page in Selenium Webdriver","keywords":"ExplicitlyWait Practice page in Selenium Webdriver"}</script>
+
+
+
+</head>
+<body class="fixed-nav sticky-footer" id="page-top" onload="current();seturl();" 1="">
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top bigfont" id="mainNav">
+<button id="first" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive1" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<a class="navbar-brand mx-auto text-center" href="https://chercher.tech/"><img style="height: 150px !important;" src="./ExplicitlyWait Practice page in Selenium Webdriver_files/log.png"></a>
+<button id="second" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- <div class="collapse navbar-collapse" id="navbarResponsive1">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link head" href="https://chercher.tech/" id="head">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link head" href="https://chercher.tech/java/index-selenium-webdriver" id="head">Java Selenium</a>
+</li>
+<li class="nav-item">
+<a class="nav-link head" href="https://chercher.tech/python/install-selenium-python" id="head">Selenium [Python]</a>
+</li>
+<li class="nav-item">
+<a class="nav-link head" href="https://chercher.tech/uipath/install-uipath" id="head">UiPath</a>
+</li>
+<li class="nav-item">
+<a class="nav-link head" href="https://chercher.tech/java/junit5-mockito" id="head">JUnit Mockito</a>
+</li>
+<li class="nav-item">
+<a class="nav-link head" href="https://chercher.tech/neo4j/neo4j-install-basic-details" id="head">Neo4J</a>
+</li>
+<li class="nav-item">
+<a class="nav-link head" href="https://chercher.tech/videos" id="head">Videos</a>
+</li>
+<li class="nav-item" itemprop="name">
+
+</li>
+<li class="nav-item" itemprop="name">
+
+</li>
+<li class="nav-item" itemprop="name">
+<a itemprop="url" class="nav-link head" id="nav" href="https://chercher.tech/contact.html">Contact Us</a>
+</li>
+</ul>
+</div>-->
+</nav>
+</header> 
+
+<!-- <img id="menu-image" width="0px" src="./ExplicitlyWait Practice page in Selenium Webdriver_files/menu.png" onclick="clicktoggle();">
+<img id="search-image" width="40px;" src="./ExplicitlyWait Practice page in Selenium Webdriver_files/search.png">
+<img id="top-image" width="40px;" src="./ExplicitlyWait Practice page in Selenium Webdriver_files/top.png" onclick="takemetop();"> -->
+<div class="content-wrapper" style="margin-top: 150px;">
+<div class="container-fluid">
+
+<!-- <ol class="breadcrumb nav">
+<li class="breadcrumb-item">
+<a href="https://chercher.tech/learn-selenium-tutorial"><b>Selenium</b></a>
+</li>
+
+<li class="breadcrumb-item active update">ExplicitlyWait Practice page</li>
+</ol> -->
+<div class="row">
+<div class="col-lg-8">
+<ol class="breadcrumb h1"><li class="breadcrumb-item"><h1 class="breadcrumb-item">Explicit Wait Practice Page - Chroma Tech Academy</h1></li></ol>
+<div class="card mb-3">
+<div class="card-header" style="background: #8ea588;">
+<i class="headericon"></i> <h2 class="title" title="ExplicitlyWait Practice page">Explicit Wait Practice Page</h2>
+</div>
+<div align="left" style="padding:20px;">
+<button class="btn btn-outline-success" id="alert" onclick="setTimeout(alertme, 5000);alertcount();">Click me to open an Alert after 5 seconds</button><span>       </span><span> Alert opens in : </span><span id="alertcount"> 5</span> Seconds<p></p>
+
+<button id="populate-text" class="btn btn-outline-dark" onclick="setTimeout(h2, 10000);h2count();">Change Text to Selenium Webdriver</button><span>      </span>
+<h2 id="h2" class="target-text">site</h2>
+<p> Selenium Webdriver will be populated inplace of "site" <span id="h2countdowntimer">10 </span> Seconds</p>
+<br><br>
+
+<button id="display-other-button" class="btn btn-outline-dark" onclick="setTimeout(display, 10000);hidecount();hide();">Display button after 10 seconds</button>
+<button id="hidden" hidden="" onclick="setTimeout(hide, 10000);">Enabled</button>
+<p> The button will be Displayed in <span id="hidecountdowntimer"> 10 </span> Seconds</p>
+<br><br>
+
+<button id="enable-button" class="btn btn-outline-dark" onclick="setTimeout(enable, 10000);enablecount();disable();">Enable button after 10 seconds</button>
+<button id="disable" disabled="false" ;onclick="setTimeout(enable, 10000);">Button</button>
+<p> The button will be enabled in <span id="enablecountdowntimer"> 10 </span> Seconds</p>
+<br><br>
+
+<button id="checkbox" type="button" class="btn btn-outline-dark btn-xs" onclick="setTimeout(myFunction, 10000); count();uncheck();">Check Checkbox after 10 seconds</button>
+<input type="checkbox" id="ch"> checkbox
+<p> The checkbox will be checked in <span id="countdowntimer"> 10 </span> Seconds</p>
+<!-- <p id="demo"></p> -->
+</div>
+<script>
+function alertme() {
+    alert("Opened after 5 seconds");
+}
+
+function alertcount(){
+var timeleft = 5;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("alertcount").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+}
+
+function myFunction() {
+    document.getElementById("ch").click()
+}
+function enable() {
+    document.getElementById("disable").disabled=false;
+}
+ 
+function display() {
+    document.getElementById("hidden").hidden=false;
+ 
+}
+function count(){
+var timeleft = 10;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+}
+ 
+function enablecount(){
+var timeleft = 10;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("enablecountdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+}
+function hidecount(){
+var timeleft = 10;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("hidecountdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+   
+}
+function h2count(){
+var timeleft = 10;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("h2countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+   
+}
+function uncheck() {
+   document.getElementById("ch").click()
+if(document.getElementById("ch").checked==true){
+                document.getElementById("ch").click()
+}
+}
+ 
+function disable() {
+  document.getElementById("disable").setAttribute('disabled','disabled');
+}
+function hide() {
+  document.getElementById("hidden").setAttribute('hidden','hidden');
+}
+function h2() {
+  document.getElementById("h2").innerText="Selenium Webdriver";
+}
+ 
+ 
+</script>
+</div>
+
+<!-- <div class="card mb-3">
+<div class="card-header"><i class="headericon"></i> <h2 id="author">About Author</h2></div>
+<p> <img class="oval" src="./ExplicitlyWait Practice page in Selenium Webdriver_files/mini.png">Myself KarthiQ, I am the author of this blog, I know ways to write a good article but some how I donot have the skills to make it to reach people, would you like help me to reach more people By sharing this Article in the social media.</p>
+<div id="share-buttons">
+<class>Share this Article</class>
+
+<a href="https://www.facebook.com/sharer.php?u=https://chercher.tech" target="_blank">
+<img src="./ExplicitlyWait Practice page in Selenium Webdriver_files/facebook.png" alt="Facebook">
+</a>
+</div>
+</div> -->
+
+
+<!-- <div class="card mb-3">
+<div class="card-header" style="background: rgb(230, 126, 34);">
+<b class="title" title="comments and suggestions">Comment / Suggestion Section</b>
+</div>
+<div class="card-body" id="comment_form">
+<form action="https://chercher.tech/cmt/post_comment/" method="post">
+<div class="form-group">
+<div class="form-row">
+<div class="col-md-6">
+<input class="form-control" id="name" name="name" type="text" aria-describedby="nameHelp" placeholder="Enter Name">
+</div>
+<div class="col-md-6">
+<input class="form-control" id="email" type="email" ,="" name="email" aria-describedby="nameHelp" placeholder="Enter email ( Optional for updates )">
+</div>
+</div>
+</div>
+<div class="form-group">
+<div class="form-row">
+<textarea class="form-control" id="comment_body" name="comment_body" type="Comment" placeholder="Comment" rows="3;"></textarea>
+<input type="hidden" name="parent_id" id="parent_id" value="0">
+<input type="hidden" name="page_id" id="page_id" value="https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver">
+</div>
+</div>
+<input class="btn btn-outline-dark btn-block" type="submit" value="Suggest Us" onclick="seturl();">
+</form>
+</div>
+</div> -->
+<!-- <div class="card mb-3">
+<div class="card-header" style="background: rgb(230, 126, 34);">
+<i class="abc"></i> <b class="title" id="cmts" title="Comments section for selenium webdriver">Point our Mistakes and Post Your Suggestions</b>
+</div>
+</div> -->
+</div>
+
+<!-- <div class="col-lg-4">
+<form id="search"><input class="search" type="search" placeholder="Search my Knowledge"><ul class="suggestions"></ul></form><p></p>
+<div id="dynamicad" class=""><ins class="adsbygoogle desktop" style="display:block" data-ad-client="ca-pub-2157680623515217" data-ad-slot="3662037985" data-ad-format="auto"></ins> </div><div id="dynamicad" class=""><ins class="adsbygoogle desktop" style="display:block" data-ad-client="ca-pub-2157680623515217" data-ad-slot="3662037985" data-ad-format="auto"></ins> </div><div id="dynamicad" class=""><ins class="adsbygoogle desktop" style="display:block" data-ad-client="ca-pub-2157680623515217" data-ad-slot="3662037985" data-ad-format="auto"></ins> </div><div id="dynamicad" class=""><ins class="adsbygoogle desktop" style="display:block" data-ad-client="ca-pub-2157680623515217" data-ad-slot="3662037985" data-ad-format="auto"></ins> </div><div id="dynamicad" class=""><ins class="adsbygoogle desktop" style="display:block" data-ad-client="ca-pub-2157680623515217" data-ad-slot="3662037985" data-ad-format="auto"></ins> </div></div>
+
+</div> -->
+<!-- <footer class="sticky-footer">
+<div class="container">
+<div class="text-center">
+<small>Copyright � Selenium Webdriver</small>
+</div>
+</div>
+</footer> -->
+
+</div>
+
+
+
+
+
+
+
+<script src="./ExplicitlyWait Practice page in Selenium Webdriver_files/bootstrap.min.js"></script>
+
+<script src="./ExplicitlyWait Practice page in Selenium Webdriver_files/index8.js"></script><script src="./ExplicitlyWait Practice page in Selenium Webdriver_files/sidebar-ads8.js"></script>
+
+ 
+
+
+
+</div>
+<script defer="" src="./ExplicitlyWait Practice page in Selenium Webdriver_files/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon="{&quot;rayId&quot;:&quot;835dca1fcf044943&quot;,&quot;r&quot;:1,&quot;version&quot;:&quot;2023.10.0&quot;,&quot;token&quot;:&quot;38526448bf2642a6926277d1661b4bbc&quot;}" crossorigin="anonymous"></script>
+
+
+
+</body></html>
