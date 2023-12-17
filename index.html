@@ -181,22 +181,22 @@
 <i class="headericon"></i> <h2 class="title" title="ExplicitlyWait Practice page">Explicit Wait Practice Page</h2>
 </div>
 <div align="left" style="padding:20px;">
-<button class="btn btn-outline-success" id="alert" onclick="setTimeout(alertme, 5000);alertcount();">Click me to open an Alert after 5 seconds</button><span>       </span><span> Alert opens in : </span><span id="alertcount"> 5</span> Seconds<p></p>
+<button class="btn btn-outline-dark" id="alert" onclick="setTimeout(alertme, 5000);alertcount();">Click me to open an Alert after 5 seconds</button><span> Alert opens in </span><span id="alertcount"> 5</span> Seconds<p></p>
 
-<button id="populate-text" class="btn btn-outline-dark" onclick="setTimeout(h2, 10000);h2count();">Change Text to Selenium Webdriver</button><span>      </span>
+<button id="populate-text" class="btn btn-outline-dark" onclick="setTimeout(h2, 10000);h2count();">Change Text to Selenium Webdriver</button>
 <h2 id="h2" class="target-text">site</h2>
 <p> Selenium Webdriver will be populated inplace of "site" <span id="h2countdowntimer">10 </span> Seconds</p>
-<br><br>
+
 
 <button id="display-other-button" class="btn btn-outline-dark" onclick="setTimeout(display, 10000);hidecount();hide();">Display button after 10 seconds</button>
 <button id="hidden" hidden="" onclick="setTimeout(hide, 10000);">Enabled</button>
 <p> The button will be Displayed in <span id="hidecountdowntimer"> 10 </span> Seconds</p>
-<br><br>
+
 
 <button id="enable-button" class="btn btn-outline-dark" onclick="setTimeout(enable, 10000);enablecount();disable();">Enable button after 10 seconds</button>
 <button id="disable" disabled="false" ;onclick="setTimeout(enable, 10000);">Button</button>
 <p> The button will be enabled in <span id="enablecountdowntimer"> 10 </span> Seconds</p>
-<br><br>
+
 
 <button id="checkbox" type="button" class="btn btn-outline-dark btn-xs" onclick="setTimeout(myFunction, 10000); count();uncheck();">Check Checkbox after 10 seconds</button>
 <input type="checkbox" id="ch"> checkbox
